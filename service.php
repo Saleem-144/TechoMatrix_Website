@@ -93,7 +93,7 @@
                     </div>
                     <div class="col-xl-2 d-none d-xl-block">
                         <a
-                            href="#"
+                            href="tel:+923151128389"
                             class="t-link bttn bttn-sm bttn-round bttn-primary"
                         >
                         +92-315-1128389
@@ -112,45 +112,61 @@
                     <div class="col-md-8 text-center">
                         <h1 class="mt-0 t-text-light text-capitalize">Services</h1>
                         <ul class="t-list breadcrumbs d-flex justify-content-center align-items-center"></ul>
-                <!-- Button trigger modal -->
-                <button type="button" class="t-link bttn bttn-md bttn-round bttn-primary border-0" data-toggle="modal" data-target="#exampleModal">
-                Get a Quote
+ <!-- Button trigger modal -->
+<button type="button" class="t-link bttn bttn-md bttn-round bttn-primary border-0" 
+    data-toggle="modal" data-target="#exampleModal"
+    style="background: orange; color: white; padding: 12px 20px; font-size: 16px; border-radius: 6px; border: none; cursor: pointer;">
+    Get a Quote
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content" style="border-radius: 12px; overflow: hidden;">
+            <div class="modal-header" style="background: orange; color: white; padding: 15px;">
+                <h5 class="modal-title" id="exampleModalLabel">Get A Quote</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" 
+                    style="background: transparent; border: none; font-size: 20px; color: white;">
+                    &times;
                 </button>
-            
-            <!-- Modal -->
-            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                <div class="modal-content" >
-                    <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel" style="color: black;">Get A Quote</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="border-color: orange;">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                    </div>
-                    <div class="modal-body" style="display: flex; justify-content: center; align-items: center; height: 100vh; background: orange;">
-                        <div style="background: white; padding: 25px; border-radius: 12px; box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); width: 350px;">
-                            <form action="submit_form.php" method="post">
-                                <label for="name" style="font-weight: bold; display: block; margin-bottom: 5px;">Good Name</label>
-                                <input type="text" id="name" name="name" required style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 6px;">
+            </div>
+            <div class="modal-body" style="background: #f9f9f9; padding: 25px;">
+                <div style="background: white; padding: 20px; border-radius: 12px; box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);">
                     
-                                <label for="email" style="font-weight: bold; display: block; margin-bottom: 5px;">Email Address</label>
-                                <input type="email" id="email" name="email" required style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 6px;">
-                    
-                                <label for="phone" style="font-weight: bold; display: block; margin-bottom: 5px;">Your Phone Numbers</label>
-                                <input type="tel" id="phone" name="phone" required style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ccc; border-radius: 6px;">
-                    
-                                <label for="message" style="font-weight: bold; display: block; margin-bottom: 5px;">How may I assist you?</label>
-                                <textarea id="message" name="message" rows="4" required style="width: 100%; padding: 10px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 6px;"></textarea>
-                    
-                                <button type="submit" style="width: 100%; padding: 12px; background: orange; color: white; border: none; border-radius: 6px; font-size: 16px; cursor: pointer;">Submit</button>
-                            </form>
-                        </div>
-                    </div>
-                    
-                   
-                </div>
+                
+<form id="quote-form">
+    <div style="margin-bottom: 12px;">
+        <input type="text" id="q-name" name="name" placeholder="Good Name"
+            style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px;">
+    </div>
+
+    <div style="margin-bottom: 12px;">
+        <input type="text" id="q-email" name="email" placeholder="Email Address"
+            style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px;">
+    </div>
+
+    <div style="margin-bottom: 12px;">
+        <input type="text" id="q-phone" name="phone" placeholder="Phone Number"
+            style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px;">
+    </div>
+
+    <div style="margin-bottom: 15px;">
+        <textarea id="q-msg" name="message" rows="4" placeholder="How may I assist you?"
+            style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px;"></textarea>
+    </div>
+
+    
+    <div id="form-messages"></div>
+
+    <input type="submit" value="Submit"
+        style="width: 100%; padding: 12px; background: orange; color: white; border: none; border-radius: 6px; font-size: 16px; cursor: pointer;">
+</form>
                 </div>
             </div>
+        </div>
+    </div>
+</div>
+
             
                     </div>
                 </div>
@@ -393,6 +409,11 @@
         <script src="assets/js/sal.js"></script>
         <!-- Main script -->
         <script src="assets/js/main.js"></script>
+         <!-- Quote Validation -->
+        <script src="assets/js/quote-form-validation.js"></script>
+
+
+        
     </body>
 
 </html>

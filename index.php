@@ -93,7 +93,7 @@
                     </div>
                     <div class="col-xl-2 d-none d-xl-block">
                         <a
-                            href="#"
+                            href="tel:+923151128389"
                             class="t-link bttn bttn-sm bttn-round bttn-primary"
                         >
                         +92-315-1128389
